@@ -11,6 +11,7 @@ services:
     tty: true
     stdin_open: true
     env_file: .env
+    working_dir: /etc/nginx
     volumes:
       - ./sources:$PHP_USER_HOME_DIRECTORY
     ports:
@@ -30,6 +31,7 @@ services:
     tty: true
     stdin_open: true
     env_file: .env
+    working_dir: /home/php
     volumes:
       - ./sources:$PHP_USER_HOME_DIRECTORY
 
@@ -41,6 +43,7 @@ services:
     tty: true
     stdin_open: true
     env_file: .env
+    working_dir: /var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: $DATABASE_ROOT_PASSWORD
       MARIADB_USER: $DATABASE_USER
