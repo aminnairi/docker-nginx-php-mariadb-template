@@ -13,7 +13,7 @@ Template for running PHP and MariaDB behind NGINX using Docker, Docker Compose &
 ## Clone
 
 ```bash
-git clone httts://github.com/aminnairi/docker-php-nginx-mariadb-template my-project
+git clone https://github.com/aminnairi/docker-php-nginx-mariadb-template my-project
 cd my-project
 ```
 
