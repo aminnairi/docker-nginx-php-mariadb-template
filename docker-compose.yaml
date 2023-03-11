@@ -11,8 +11,9 @@ services:
     tty: true
     stdin_open: true
     env_file: .env
-    working_dir: /etc/nginx
+    working_dir: $PHP_USER_HOME_DIRECTORY
     volumes:
+      - ./docker/nginx/templates:/etc/nginx/templates
       - ./sources:$PHP_USER_HOME_DIRECTORY
     ports:
       - $SERVER_PORT:80
@@ -31,7 +32,8 @@ services:
     tty: true
     stdin_open: true
     env_file: .env
-    working_dir: /home/php
+    working_dir: $PHP_USER_HOME_DIRECTORY
+    user: php
     volumes:
       - ./sources:$PHP_USER_HOME_DIRECTORY
 
